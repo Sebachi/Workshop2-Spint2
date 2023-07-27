@@ -1,0 +1,68 @@
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/reset.scss";
+
+// body{
+//     background-color: #181a23;
+// }
+
+
+.header {
+padding: 30px 0 0 0px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+  &__logo {
+    padding: 0 30px;
+    cursor: pointer;
+  }
+  &__nav {
+    display: flex;
+    height:  80px;
+    gap: 30px;
+    align-items: center;
+    font-family: $font-barlow;
+    padding: 0px 120px;
+    position: relative;
+    
+  }
+  &__link::before {
+    content: ""; /* Pseudo-elemento vacío necesario para aplicar el filtro */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+   // background-color: $gray-nav;
+   // opacity: 20%;
+   filter: brightness(110%);
+    backdrop-filter: blur(40px); /* Aplicamos el filtro al pseudo-elemento */
+    z-index: -2; /* Aseguramos que el pseudo-elemento esté detrás del contenido */
+    
+}
+  &__line {
+    border-bottom: 1px $gray-line-bottom solid;
+    width: 530px;
+    align-self: center;
+    position: absolute;
+    right: 580px;
+    z-index: 1;
+  }
+  &__link {
+    display: flex;
+    text-decoration: none;
+    gap: 8px;
+    color: #fff;
+    border: 1px transparent solid;
+    padding: 29px 0;
+    &__numeral {
+    
+    }
+    &__title {
+        color: #e4e4e5;
+    }
+    &:hover{
+      border-bottom:2px white solid ;
+    }
+  }
+}
