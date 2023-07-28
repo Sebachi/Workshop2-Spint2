@@ -15,6 +15,12 @@ $font-barlow: 'Barlow Condensed', sans-serif;
       @content;
     }
   }
+@mixin desktopHeight {
+    @media (min-height: 700px) {
+      @content;
+    }
+  }
+
 @mixin tablet {
     @media (min-width: 725px) and (max-width: 1200px) {
       @content;

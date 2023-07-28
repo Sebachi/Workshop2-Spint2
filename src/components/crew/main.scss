@@ -1,8 +1,296 @@
-.background_crew{
-    background-image: url("/assets/crew/background-crew-desktop.jpg");
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    z-index: -999;
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/reset.scss";
+
+.crew {
+  position: relative;
+  bottom: 0;
+  display: flex;
+  align-self: flex-end;
+  padding: 153px 60px 0 100px;
+  justify-content: space-between;
+  height: 100%;
+  @include desktopHeight{
+    height: 89vh;
+  }
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    padding: 10vw 0 0 10vw;
+  }
+  &__banner {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    min-width: 40%;
+    @include tablet {
+      gap: 0;
+    }
+    .title {
+      display: flex;
+      gap: 20px;
+      color: $white;
+      font-family: $font-barlow;
+      font-size: 28px;
+      line-height: 33.6px;
+      letter-spacing: 4.72px;
+      @include tablet {
+        align-self: flex-start;
+        padding: 0;
+      }
+      .number {
+        height: 34px;
+        opacity: 25%;
+        font-weight: 700;
+      }
+      .text {
+        height: 34px;
+        font-weight: 400;
+      }
+    }
+    .info {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      @include tablet {
+        padding: 10vw;
+        align-items: center;
+        gap: 10px;
+      }
+      .role {
+        color: $white;
+        font-family: $font-bellefair;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 36.67px;
+        width: 214px;
+        height: 37px;
+        top: 400px;
+        left: 165.5px;
+        opacity: 50.42%;
+        text-transform: uppercase;
+        @include tablet {
+          width: auto;
+        }
+      }
+      .name {
+        color: $white;
+        font-family: $font-bellefair;
+        font-weight: 400;
+        font-size: 56px;
+        line-height: 64.18px;
+        width: auto;
+        height: 64px;
+        top: 452px;
+        left: 165.5px;
+        text-transform: uppercase;
+        @include tablet {
+          font-size: calc(40px + 0.3vw);
+          width: auto;
+        }
+      }
+      .bio {
+        color: $light-blue;
+        font-family: $font-barlow;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 32px;
+        width: 444px;
+        height: 128px;
+        top: 543px;
+        left: 165px;
+        @include tablet{
+          text-align: center;
+        }
+      }
+      .indicator-container {
+        display: flex;
+        width: auto;
+        height: 24px;
+        padding-top: 80px;
+        // top: 791px;
+        // left: 167px;
+      }
+      .indicator {
+        width: 15px;
+        height: 15px;
+        background-color: $light-blue;
+        border-radius: 50%;
+        margin: 0 13px;
+        opacity: 17.44%;
+        cursor: pointer;
+      }
+      .indicator.active {
+        background-color: $white;
+        opacity: 100%;
+      }
+    }
+  }
+  &__img {
+    //min-width: 40%;
+    height: 85%;
+    @include desktop{
+      position: absolute;
+      padding-right: calc(50px + 0.2vw);
+      right: 0;
+      bottom: 0;
+    }
+    & > img {
+      height: 100%;
+      width: 100%;
+    }
+    @include tablet {
+      align-self: center;
+      height: 50vw;
+    }
+  }
 }
+@include mobile {
+    .crew {
+      display: flex;
+      flex-direction: column;
+      padding: 20px 30px 0 30px;
+      height: 100%;
+      gap: 50px;
+      &__title {
+        display: flex;
+        gap: 20px;
+        color: $white;
+        font-family: $font-barlow;
+        font-size: 22px;
+        line-height: 33.6px;
+        letter-spacing: 4.72px;
+        align-self: center;
+        .number {
+          height: 34px;
+          opacity: 25%;
+          font-weight: 700;
+        }
+        .text {
+          height: 34px;
+          font-weight: 400;
+        }
+      }
+      &__box{
+        display: flex;
+        position: relative;
+        width: 100%;
+        left: 0;
+        justify-content: center;
+        .line{
+            position: absolute;
+            border-bottom: 0.5px solid $light-blue;
+            width: 100%;
+            padding: 0;
+            left: 0;
+            color: rgba(56,59,75,1);
+            bottom: 0;
+        }
+      }
+      &__img {
+        // padding: 0 50px;
+        // min-width: 40%;
+        height: 50vw;
+        width: 50vw;
+        align-self: center;
+        
+        & > img {
+          height: 100%;
+          width: 100%;
+        }
+        
+      }
+      &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        .role {
+          color: $white;
+          font-family: $font-bellefair;
+          font-weight: 400;
+          font-size: calc(20px + 0.3vw);
+          line-height: 36.67px;
+          width: auto;
+          height: 37px;
+          top: 400px;
+          left: 165.5px;
+          opacity: 50.42%;
+          text-transform: uppercase;
+          align-self: center;
+          padding-top: 20px;
+        }
+        .name {
+          color: $white;
+          font-family: $font-bellefair;
+          font-weight: 400;
+          font-size: calc(25px + 0.3vw);
+          line-height: 64.18px;
+          width: auto;
+          height: 64px;
+          top: 452px;
+          left: 165.5px;
+          text-transform: uppercase;
+          align-self: center;
+        }
+        .bio {
+          color: $light-blue;
+          font-family: $font-barlow;
+          font-weight: 400;
+          font-size: 23px;
+          line-height: 37px;
+          width: auto;
+          height: 128px;
+          top: 543px;
+          left: 165px;
+          text-align: center;
+          align-self: center;
+  
+        }
+        .indicator-container {
+          display: flex;
+          width: 132px;
+          height: 15px;
+          align-self: center;
+          // top: 791px;
+          // left: 167px;
+        }
+        .indicator {
+          width: 15px;
+          height: 15px;
+          background-color: $light-blue;
+          border-radius: 50%;
+          margin: 0 10px;
+          opacity: 17.44%;
+          cursor: pointer;
+        }
+        .indicator.active {
+          background-color: $white;
+          opacity: 100%;
+        }
+      }
+    }
+  }
+.background_crew {
+  background-image: url("/assets/crew/background-crew-desktop.jpg");
+  @include mobile {
+    background-image: url("/assets/crew/background-crew-mobile.jpg");
+    min-height: 1100px;
+    background-repeat: repeat;
+  }
+  @include tablet {
+    //background-image: url("/assets/crew/background-crew-tablet.jpg");
+    min-height: 1460px;
+  }
+
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  min-height: 700px;
+  @include desktopHeight {
+    min-height: 1011px;
+  }
+  top: 0;
+  z-index: -999;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
