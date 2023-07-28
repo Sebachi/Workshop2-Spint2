@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import './main.scss'
+import useScreenSize from '../../hooks/useScreenSize'
 
 function Header() {
-  const [width, setWidth] = useState(innerWidth)
-  useEffect(() => {
-   setWidth(innerWidth)
-  }, [innerWidth])
+  const size = useScreenSize()
+
   
 
 
@@ -18,7 +17,7 @@ function Header() {
     <section className='header'>
       <figure className='header__logo' onClick={handleLogo}><img src="/assets/shared/logo.svg" alt="Logo" /></figure>
       {
-        innerWidth > 1200 
+        size.width > 1200 
         
       }
       <div className='header__container'>

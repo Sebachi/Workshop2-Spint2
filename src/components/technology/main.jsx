@@ -1,16 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import "./main.scss"
 import dataObject from "../../services/data.js"
+import useScreenSize from '../../hooks/useScreenSize.jsx'
 
 
 const Technology = () => {
   const [techInfo, setTechInfo] = useState([])
   const [techIndex, setTechIndex] = useState(0)
-  // const [techNow, setTechNow] = useState({})
-
-  // setTechInfo(dataObject.technology)
-
-  //   setTechNow(techInfo[techIndex])
+  const size = useScreenSize()
 
   const techNow = dataObject.technology
 
@@ -48,7 +45,7 @@ const Technology = () => {
 
             <figure className="technology__figure">
               {
-                innerWidth > 1200 ? (<img src={techNow[techIndex].images.porrait} alt="an image :)" />) :
+                size.width > 1200 ? (<img src={techNow[techIndex].images.porrait} alt="an image :)" />) :
                   <img src={techNow[techIndex].images.landcape} alt="an image :)" />
               }
             </figure>

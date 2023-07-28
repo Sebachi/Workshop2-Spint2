@@ -78,6 +78,8 @@
         padding: 20px 0px;
 
         & .technology__li {
+          cursor: pointer;
+          color: #fff;
           list-style: none;
           padding: 10px;
           background-color: transparent;
@@ -89,10 +91,12 @@
 
           &:hover {
             background-color: $light-blue;
+            color: #000;
           }
         }
 
         & .technology__li__activated {
+          cursor: pointer;
           list-style: none;
           padding: 10px;
           background-color: transparent;
@@ -208,6 +212,8 @@
         padding: 20px 0px;
 
         & .technology__li {
+          cursor: pointer;
+          color: #fff;
           list-style: none;
           padding: 10px;
           background-color: transparent;
@@ -219,10 +225,12 @@
 
           &:hover {
             background-color: $light-blue;
+            color: #000;
           }
         }
 
         & .technology__li__activated {
+          cursor: pointer;
           list-style: none;
           padding: 10px;
           background-color: transparent;
@@ -326,6 +334,8 @@
         padding: 20px 0px;
 
         & .technology__li {
+          cursor: pointer;
+          color: #fff;
           list-style: none;
           padding: 10px;
           background-color: transparent;
@@ -337,10 +347,12 @@
 
           &:hover {
             background-color: $light-blue;
+            color: #000;
           }
         }
 
         & .technology__li__activated {
+          cursor: pointer;
           list-style: none;
           padding: 10px;
           background-color: transparent;
