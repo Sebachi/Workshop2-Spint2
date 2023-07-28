@@ -12,6 +12,10 @@ padding: 30px 0 0 0px;
   justify-content: space-between;
   position: relative;
   align-items: center;
+  @include mobile{
+    padding: 30px 30px 0 0px;
+  }
+  
   &__logo {
     padding: 0 30px;
     cursor: pointer;
@@ -24,11 +28,19 @@ padding: 30px 0 0 0px;
     font-family: $font-barlow;
     padding: 0px 120px;
     position: relative;
-    
+    width: 70%;
+    font-size: calc(14px + 0.3vw);
+    @include desktop{
+      
+    }
+    @include tablet{
+      padding: 0px 0 0 50px;
+    }
   }
   &__link::before {
     content: ""; /* Pseudo-elemento vacío necesario para aplicar el filtro */
     position: absolute;
+   
     top: 0;
     left: 0;
     right: 0;
@@ -43,15 +55,19 @@ padding: 30px 0 0 0px;
   &__line {
     border-bottom: 1px $gray-line-bottom solid;
     width: 60vh;
+    width: 32%;
     align-self: center;
     position: absolute;
-    right: 580px;
+    left: 0;
     z-index: 1;
     @include mobile{
       display: none;
     }
     @include tablet{
     display: none;
+    }
+    @include tablet {
+      display: none;
     }
   }
   &__link {
@@ -62,13 +78,25 @@ padding: 30px 0 0 0px;
     border: 1px transparent solid;
     padding: 29px 0;
     &__numeral {
-    
+     color: #fff;
     }
     &__title {
         color: #e4e4e5;
     }
     &:hover{
       border-bottom:2px white solid ;
+
     }
   }
+}
+.header__container{
+  display: flex;
+  width: 90%;
+  position: relative;
+  justify-content: flex-end;
+}
+.headerMobile__container{
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
 }

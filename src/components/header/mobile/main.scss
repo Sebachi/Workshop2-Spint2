@@ -1,0 +1,45 @@
+@import "../../../assets/styles/variables.scss";
+
+.mobile__nav{
+    width: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    z-index: 1;
+    background-color: transparent;
+    filter: brightness(80%);
+    backdrop-filter: blur(20px);
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    padding: 125px 30px;
+    gap: 30px;
+    font-family: $font-barlow;
+    & .mobile__link{
+        text-decoration: none;
+        display: flex;
+        gap: 10px;
+        color: #e4e4e5;
+        &:hover {
+            border-bottom:2px white solid ;
+            & .mobile__link__numeral{
+                color: #fff;
+                font-weight: 700;
+            }
+            & .mobile__link__title{
+                color: #e4e4e5;
+                font-weight: 900;
+                
+             }
+        }
+       
+        &__title{
+           color: #fff; 
+           font-weight: 700;
+           
+        }
+    }
+    
+
+}
