@@ -24,11 +24,13 @@ padding: 30px 0 0 0px;
     font-family: $font-barlow;
     padding: 0px 120px;
     position: relative;
-    
+    width: 70%;
+    font-size: calc(14px + 0.3vw);
   }
   &__link::before {
     content: ""; /* Pseudo-elemento vacío necesario para aplicar el filtro */
     position: absolute;
+   
     top: 0;
     left: 0;
     right: 0;
@@ -42,10 +44,10 @@ padding: 30px 0 0 0px;
 }
   &__line {
     border-bottom: 1px $gray-line-bottom solid;
-    width: 530px;
+    width: 32%;
     align-self: center;
     position: absolute;
-    right: 580px;
+    left: 0;
     z-index: 1;
   }
   &__link {
@@ -65,4 +67,10 @@ padding: 30px 0 0 0px;
       border-bottom:2px white solid ;
     }
   }
+}
+.header__container{
+  display: flex;
+  width: 90%;
+  position: relative;
+  justify-content: flex-end;
 }
