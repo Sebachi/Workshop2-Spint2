@@ -12,6 +12,9 @@ padding: 30px 0 0 0px;
   justify-content: space-between;
   position: relative;
   align-items: center;
+  @include mobile{
+    padding: 30px 30px 0 0px;
+  }
   &__logo {
     padding: 0 30px;
     cursor: pointer;
@@ -49,6 +52,9 @@ padding: 30px 0 0 0px;
     position: absolute;
     left: 0;
     z-index: 1;
+    @include tablet {
+      display: none;
+    }
   }
   &__link {
     display: flex;
@@ -65,6 +71,7 @@ padding: 30px 0 0 0px;
     }
     &:hover{
       border-bottom:2px white solid ;
+
     }
   }
 }
@@ -73,4 +80,9 @@ padding: 30px 0 0 0px;
   width: 90%;
   position: relative;
   justify-content: flex-end;
+}
+.headerMobile__container{
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
 }
