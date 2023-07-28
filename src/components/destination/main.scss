@@ -1,8 +1,200 @@
+@import "../../assets/styles/variables.scss";
+
+
 .background_destination{
     background-image: url("/assets/destination/background-destination-desktop.jpg");
+    @include mobile{
+        background-image: url("/assets/destination/background-destination-mobile.jpg");
+    //background-repeat: repeat;
+      // background-size: auto;
+        min-height: 1200px;
+    }
+    @include tablet{
+        //background-image: url("/assets/destination/background-destination-tablet.jpg");
+      //  background-repeat: repeat;
+       // background-size: auto;
+       min-height: 1300px;
+    }
     position: absolute;
     height: 100%;
     width: 100%;
+    min-height: 1000px;
     top: 0;
     z-index: -999;
+    background-size: cover;
+  background-repeat: no-repeat;
+}
+.destination{
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: $font-barlow;
+    @include tablet{
+        flex-direction: column;
+        align-items: center;
+        padding: 40px;
+    }
+    @include mobile{
+        flex-direction: column;
+        align-items: center;
+        padding: 40px;
+    }
+    justify-content: space-between;
+    padding: 80px 150px;
+    &_container1{
+        width: 40%;
+        @include tablet{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        @include mobile{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            
+        }
+    &_title{
+        & > span {
+            color: mix(#4e5058, white, 90%);
+            font-weight: 900;
+        }
+        text-transform: uppercase;
+        font-weight: 100;
+        display: flex;
+        gap: 18px;
+        word-spacing: 5px;
+        font-size: calc(22px + 0.3vw);
+        color: #e4e4e5;
+        letter-spacing: 3px;
+        @include mobile{
+            justify-content: center;
+            text-align: center;
+            gap: 15px;
+            word-spacing: 0px;
+        }
+    }
+    &_figure{
+       margin: 80px 50px;
+        height: 30vw;
+        @include tablet{
+            height: 50vw;
+            align-self: center;
+            margin: 50px 50px 0px 50px; 
+        }
+        @include mobile{
+            height: 50vw;
+            align-self: center;
+            margin: 50px 50px 0px 50px; 
+        }
+        & img {
+            height: 100%;
+        }
+    }
+}
+
+    &_container2{
+        padding-top: 90px;
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        @include tablet{
+            width: 100%;
+            align-items: center;
+        }
+        @include mobile{
+            width: 100%;
+            align-items: center;
+        }
+        &_buttons{
+            color: $light-blue;
+            letter-spacing: 3px;
+            display: flex;
+            gap: 40px;
+            & .destination_button{
+                list-style: none;
+                cursor: pointer;
+                &:hover{
+                    color: mix(#4e5058, white, 60%);
+                    font-weight: 500;
+                    border-bottom: 4px mix(#4e5058, white, 60%) solid;
+                    border-radius: 2px;
+                    padding-bottom: 11px;
+                }
+            }
+        }
+       
+        &_title{
+            font-family: $font-bellefair;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: calc(100px + 0.5vw);
+            font-weight: 100;
+            @include mobile{
+                font-size: calc(80px + 0.5vw);
+            }
+        }
+        &_description{
+            color:  lighten($light-blue, 4%) ;
+            width: 90%;
+            font-size: calc(16px + 0.3vw);
+            font-weight: 100;
+            line-height: 30px;
+            @include tablet{
+               text-align: center;
+            }
+            @include mobile{
+                text-align: center;
+            }
+        }
+        &_inf{
+            position: relative;
+           
+            & .destination_line{
+                position: absolute;
+                border-top: 1px #4e5058 solid;
+                width: 100%;
+            }
+            &_stats{
+                display: flex;
+                gap: 50px;
+                @include mobile{
+                   flex-wrap: wrap;
+                   justify-content: center;
+                   text-align: center;
+                   gap: 30px;
+                }
+            & .destination_distance,  .destination_travel{
+                display: flex;
+                flex-direction: column;
+                line-height: 45px;
+                text-transform: uppercase;
+            }
+           
+            & .destination_distance_text, .destination_travel_text{
+                color: $light-blue;
+                font-size: calc(16px + 0.3vw);
+                font-weight: 100;
+            }
+            & .destination_distance_stat, .destination_travel_stat{
+                font-size: calc(28px + 0.3vw);
+                font-weight: 100;
+                color: #e4e4e5;
+                font-family: $font-bellefair;
+            }
+        }
+
+        }
+        
+       
+    }
+
+}
+.active_destination{
+    color: #fff;
+    font-weight: 500;
+    border-bottom: 4px #fff solid;
+    border-radius: 2px;
+    padding-bottom: 11px;
 }
