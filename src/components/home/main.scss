@@ -1,8 +1,150 @@
-.background_home{
-    background-image: url("/assets/home/background-home-desktop.jpg");
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    z-index: -999;
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/reset.scss";
+
+.background_home {
+  background-image: url("/assets/home/background-home-desktop.jpg");
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  z-index: -999;
 }
+
+@include desktop {
+  .home__section {
+    font-family: $font-barlow;
+    display: flex;
+  }
+
+  .home__description {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 100px;
+
+    &__pretext {
+      color: $light-blue;
+      text-transform: uppercase;
+      font-size: 18px;
+      width: 70%;
+      //border: green solid 1px;
+
+    }
+
+    &__title {
+      color: $white;
+      text-transform: uppercase;
+      font-size: 108px;
+      font-weight: 400;
+      width: 70%;
+
+
+    }
+
+    &__info {
+      color: $light-blue;
+      font-size: 14px;
+      width: 70%;
+
+
+    }
+  }
+
+  .home__btn {
+    width: 50%;
+    padding: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & .home__link {
+      text-decoration: none;
+      background-color: $white;
+      padding: 60px 30px 60px 30px;
+      border-radius: 100%;
+      font-family: $font-bellefair;
+      font-size: 20px;
+      text-transform: uppercase;
+      color: $black;
+
+    }
+
+  }
+}
+
+@include tablet {
+
+  .home__section {
+    font-family: $font-barlow;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .home__description {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 30px 20px;
+    align-items: center;
+    justify-content: center;
+
+    &__pretext {
+      color: $light-blue;
+      text-transform: uppercase;
+      font-size: 18px;
+      width: 100%;
+      //border: green solid 1px;
+      text-align: center;
+
+    }
+
+    &__title {
+      color: $white;
+      text-transform: uppercase;
+      font-size: 108px;
+      font-weight: 400;
+      width: 100%;
+
+      text-align: center;
+
+    }
+
+    &__info {
+      color: $light-blue;
+      font-size: 14px;
+      width: 100%;
+
+      text-align: center;
+      padding: 0px 300px;
+
+
+    }
+  }
+
+  .home__btn {
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & .home__link {
+      text-decoration: none;
+      background-color: $white;
+      padding: 60px 40px 60px 40px;
+      border-radius: 100%;
+      font-family: $font-barlow;
+      font-size: 20px;
+      text-transform: uppercase;
+      color: $black;
+      font-weight: 700;
+
+    }
+
+  }
+}
+
+@include mobile {}
