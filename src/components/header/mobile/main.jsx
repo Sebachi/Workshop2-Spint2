@@ -8,7 +8,7 @@ function MobileMenu() {
             <span className='mobile__link__numeral'>00</span>  <span className='mobile__link__title'>HOME</span>
             </NavLink>
             <NavLink to={"/destination"} className='mobile__link'> 
-              <span className='mobile__link__numeral'>01</span>  <span className='mobile__link__title'>DESTNATION</span>
+              <span className='mobile__link__numeral'>01</span>  <span className='mobile__link__title'>DESTINATION</span>
             </NavLink>
             <NavLink to={"/crew"} className='mobile__link'> 
               <span className='mobile__link__numeral'>02</span>  <span className='mobile__link__title'>CREW</span>

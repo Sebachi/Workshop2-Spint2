@@ -44,7 +44,7 @@ function Header() {
             <span className='header__link__numeral'>00</span>  <span className='header__link__title'>HOME</span>
             </NavLink>
             <NavLink to={"/destination"} className='header__link'> 
-              <span className='header__link__numeral'>01</span>  <span className='header__link__title'>DESTNATION</span>
+              <span className='header__link__numeral'>01</span>  <span className='header__link__title'>DESTINATION</span>
             </NavLink>
             <NavLink to={"/crew"} className='header__link'> 
               <span className='header__link__numeral'>02</span>  <span className='header__link__title'>CREW</span>

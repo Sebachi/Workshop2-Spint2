@@ -1,10 +1,11 @@
 import React from 'react'
 import "./main.scss"
 import { NavLink, useNavigate, Link } from 'react-router-dom'
+import useScreenSize from '../../hooks/useScreenSize';
 
 function Home() {
-  const width = innerWidth
-  console.log(width);
+  const size = useScreenSize()
+  console.log(size.width);
   return (
     <>
       <div className='background_home'></div>
@@ -15,9 +16,11 @@ function Home() {
           <p className='home__description__info'>let's face it: if you wan to go to space. you might as well genuinely go to ouuter space and not hover kind of on the edge of it. Well sit back, and relax because we'll give you a truly out of this world experience!</p>
         </article>
         <article className='home__btn'>
+      
           <Link to={"/destination"} className='home__link'>
             explore
           </Link>
+          
         </article>
       </section>
     </>

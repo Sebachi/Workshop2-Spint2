@@ -43,15 +43,6 @@ const dataObject =  {
     ],
     crew: [
       {
-        name: "Douglas Hurley",
-        images: {
-          png: "/assets/crew/image-douglas-hurley.png",
-          webp: "/assets/crew/image-douglas-hurley.webp"
-        },
-        role: "Comander",
-        bio: "Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2."
-      },
-      {
         name: "Mark Shuttleworth",
         images: {
           png: "/assets/crew/image-mark-shuttleworth.png",
@@ -59,6 +50,15 @@ const dataObject =  {
         },
         role: "Mision Specialist",
         bio: "Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Linux-based Ubuntu operating system. Shuttleworth became the first South African to travel to space as a space tourist."
+      },
+      {
+        name: "Douglas Hurley",
+        images: {
+          png: "/assets/crew/image-douglas-hurley.png",
+          webp: "/assets/crew/image-douglas-hurley.webp"
+        },
+        role: "Comander",
+        bio: "Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2."
       },
       {
         name: "Victor Glover",
