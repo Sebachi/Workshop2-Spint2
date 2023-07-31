@@ -19,7 +19,7 @@ function Crew() {
         <section className="crew">
           <section className="crew__banner">
             <section className="title">
-              <h1 className="number">002</h1>{" "}
+              <h1 className="number">02</h1>{" "}
               <h1 className="text">MEET YOUR CREW</h1>
             </section>
             <div className="info">
